@@ -1,5 +1,6 @@
 # Atividade-Complementar
 Trabalho de Implementação de Software 4TADS
+Grupo: Edgar da Fontoura e Rony Fagundes.
 
 Foi ultilizado o VSCode para desenvolver o programa, e escolhido Javascript como linguagem de programação e o CSS para manipulação da aparência breve do site. 
 Pois são duas linguagem que estamos mais familharizados por agora graças ao curso.
