@@ -1,0 +1,67 @@
+<!--
+  Esse é o HTML da minha calculadora científica.
+  Usei o Visual Studio Code (VS Code) pra desenvolver tudo,
+  porque ele é fácil de usar, tem sugestões de código, e com o plugin Live Server 
+  eu consigo ver as mudanças em tempo real no navegador, o que ajuda muito.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Científica</title>
+  <!-- Aqui eu ligo o CSS externo que cuida do visual da calculadora -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <div class="calculadora">
+    <!-- Essa é a telinha onde os números e resultados aparecem -->
+    <input type="text" id="display" readonly>
+
+    <!-- Aqui começam os botões da calculadora -->
+    <div class="botoes">
+      <!-- Botões básicos -->
+      <button onclick="limpar()" class="limpar">Limpar</button>
+      <button onclick="insert('(')">(</button>
+      <button onclick="insert(')')">)</button>
+      <button onclick="insert('/')">÷</button>
+
+      <!-- Números e operações -->
+      <button onclick="insert('7')">7</button>
+      <button onclick="insert('8')">8</button>
+      <button onclick="insert('9')">9</button>
+      <button onclick="insert('*')">×</button>
+
+      <button onclick="insert('4')">4</button>
+      <button onclick="insert('5')">5</button>
+      <button onclick="insert('6')">6</button>
+      <button onclick="insert('-')">−</button>
+
+      <button onclick="insert('1')">1</button>
+      <button onclick="insert('2')">2</button>
+      <button onclick="insert('3')">3</button>
+      <button onclick="insert('+')">+</button>
+
+      <button onclick="insert('0')">0</button>
+      <button onclick="insert('.')">,</button>
+      <button onclick="calcular()" class="igual">=</button>
+      <button onclick="insert('**')">^</button>
+
+      <!-- Funções científicas -->
+      <button onclick="func('Math.sin')">sen</button>
+      <button onclick="func('Math.cos')">cos</button>
+      <button onclick="func('Math.tan')">tan</button>
+      <button onclick="func('Math.log10')">log</button>
+
+      <button onclick="func('Math.sqrt')">raiz</button>
+      <button onclick="func('Math.exp')">eˣ</button>
+      <button onclick="insert('Math.PI')">π</button>
+      <button onclick="insert('Math.E')">e</button>
+    </div>
+  </div>
+
+  <!-- Aqui conecto o JavaScript que faz tudo funcionar -->
+  <script src="script.js"></script>
+</body>
+</html>

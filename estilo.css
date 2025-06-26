@@ -1,0 +1,96 @@
+/*
+  Aqui é onde deixei a calculadora com uma aparência mais moderna e limpa.
+  Também usei o VS Code pra escrever esse CSS, porque ele mostra dicas,
+  corrige erros e ainda ajuda na organização do código.
+*/
+
+body {
+  /* Centralizei tudo na tela e coloquei um fundo em degradê pra ficar bonito */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e3f2fd, #90caf9);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculadora {
+  /* Essa é a "caixinha" da calculadora */
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 340px;
+}
+
+input {
+  /* Visual da telinha onde aparece o cálculo */
+  width: 100%;
+  height: 60px;
+  font-size: 26px;
+  text-align: right; 
+  line-height: 60px; 
+  border: none;
+  border-radius: 12px;
+  padding: 0 15px; 
+  background-color: #f1f8ff;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  box-sizing: border-box; 
+}
+
+.botoes {
+  /* Organizei os botões em 4 colunas usando grid */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  /* Estilo padrão dos botões */
+  padding: 18px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #e0f2f1;
+  color: #004d40;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Efeitos quando o botão é pressionado ou passa o mouse por cima */
+button:hover {
+  background-color: #b2dfdb;
+}
+button:active {
+  transform: scale(0.97);
+}
+
+/* Botão "Limpar" destacado em vermelho */
+.limpar {
+  background-color: #ef5350;
+  color: white;
+}
+.limpar:hover {
+  background-color: #e53935;
+}
+
+/* Botão "=" destacado em verde */
+.igual {
+  background-color: #4caf50;
+  color: white;
+}
+.igual:hover {
+  background-color: #43a047;
+}
+
+/* Botões das funções científicas com cor azul */
+button:nth-child(n+17) {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+button:nth-child(n+17):hover {
+  background-color: #bbdefb;
+}
